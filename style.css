@@ -1,0 +1,8 @@
+body {
+  transition: all 1s ease-in-out;
+}
+#main {
+  transition: all 1s ease-in-out;
+  background-color: #00153c;
+  color: white;
+}
