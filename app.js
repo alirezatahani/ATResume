@@ -33,24 +33,40 @@ function getElements() {
 }
 
 async function startAnimation() {
-  Promise.all([
-    writeTo(0, mainElement, style, 1, 10),
-    writeTo(0, styleElement, style, 1, 10)
-  ]);
+  await writeTo("style", 0, mainElement, style, 1, 80);
+  await writeTo("text", 0, styleElement, style, 1, 80);
 }
 
-async function writeTo(index, target, message, characterPerInterval, speed) {
+async function writeTo(
+  type,
+  index,
+  target,
+  message,
+  characterPerInterval,
+  speed
+) {
   return new Promise((resolve, reject) => {
     const char = message.slice(index, index + characterPerInterval);
     characterPerInterval++;
-    target.innerHTML = char;
-    styleHeader.innerHTML = char;
+    if (type === "text") {
+      target.innerHTML = char;
+    } else {
+      target.innerHTML = char;
+      styleHeader.innerHTML = char;
+    }
 
     if (characterPerInterval < message.length) {
-      setTimeout(
-        () => writeTo(index, target, message, characterPerInterval, speed),
-        speed
-      );
+      setTimeout(async () => {
+        await writeTo(
+          type,
+          index,
+          target,
+          message,
+          characterPerInterval,
+          speed
+        );
+        resolve();
+      }, speed);
     } else {
       resolve();
     }
