@@ -1,8 +1,57 @@
-body {
+/* 
+*
+*
+Hi my name is Alireza Tahani ...
+
+I'm JavaScript developer and today i just want to have some fun ... 
+
+let's start with some css ... 
+
+*/
+
+* {
   transition: all 1s ease-in-out;
 }
-#main {
-  transition: all 1s ease-in-out;
+
+html {
   background-color: #00153c;
+}
+body {
+  overflow: hidden;
+}
+#main {
+  overflow: auto;
+  max-height: 90vh;
   color: white;
+  padding: 20px;
+  border: 4px solid #1d4ca2;
+  background-color: #000715;
+  border-radius: 4px;
+  white-space: pre-wrap;
+}
+
+/* now that's better ...
+
+I just need a place to work with so just make this things clear 
+
+*/
+
+.comment {
+  color: #857f6b;
+  font-style: italic;
+}
+.selector {
+  color: #ffc142;
+}
+.selector .key {
+  color: #64d5ea;
+}
+.key {
+  color: #64d5ea;
+}
+.value {
+  color: #ff9a00;
+}
+.number {
+  color: #27f973;
 }

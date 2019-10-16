@@ -1,5 +1,6 @@
 import style from "raw-loader!./style.css";
-
+import writeChar from "./write";
+import writeSimpleChar from "./write";
 let mainElement, styleElement, styleHeader;
 
 // Wait for load to get started.
@@ -33,38 +34,24 @@ function getElements() {
 }
 
 async function startAnimation() {
-  await writeTo("style", 0, mainElement, style, 1, 80);
-  await writeTo("text", 0, styleElement, style, 1, 80);
+  await writeTo(true, 0, mainElement, style, 0);
 }
 
-async function writeTo(
-  type,
-  index,
-  target,
-  message,
-  characterPerInterval,
-  speed
-) {
+async function writeTo(isStyle, index, target, message, speed) {
   return new Promise((resolve, reject) => {
-    const char = message.slice(index, index + characterPerInterval);
-    characterPerInterval++;
-    if (type === "text") {
-      target.innerHTML = char;
+    const char = message.slice(index, index + 1);
+    index++;
+    target.scrollTop = target.scrollHeight;
+
+    if (isStyle) {
+      writeChar(target, char, styleHeader);
     } else {
-      target.innerHTML = char;
-      styleHeader.innerHTML = char;
+      writeSimpleChar(target, char);
     }
 
-    if (characterPerInterval < message.length) {
+    if (index < message.length) {
       setTimeout(async () => {
-        await writeTo(
-          type,
-          index,
-          target,
-          message,
-          characterPerInterval,
-          speed
-        );
+        await writeTo(isStyle, index, target, message, speed);
         resolve();
       }, speed);
     } else {
