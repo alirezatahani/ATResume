@@ -28,9 +28,7 @@ const commentRegex = /(\/\*(?:[^](?!\/\*))*\*)$/;
 const keyRegex = /([a-zA-Z- ^\n]*)$/;
 const valueRegex = /([^:]*)$/;
 const selectorRegex = /(.*)$/;
-const pxRegex = /\dp/;
-const numberRegex = /([0-9]{1,}(px|vh))/g;
-const pxRegex2 = /p$/;
+const numberRegex = /([0-9]{1,}(px|vh|vw|%))/g;
 
 export function handleChar(fullText, char) {
   if (openComment && char !== "/") {

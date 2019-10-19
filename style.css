@@ -3,36 +3,44 @@
 *
 Hi my name is Alireza Tahani ...
 
-I'm JavaScript developer and today i just want to have some fun ... 
+I'm JavaScript developer and today I just want to have some fun ... 
 
 let's start with some css ... 
 
 */
 
 * {
-  transition: all 1s ease-in-out;
-}
-
-html {
-  background-color: #00153c;
+  transition: all 1s ease-out;
+  -webkit-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
 }
 body {
   overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
+html {
+  background-color: #00153c;
+}
+
 #main {
+  color: white;
+  width: 49%;
   overflow: auto;
   max-height: 90vh;
-  color: white;
   padding: 20px;
   border: 4px solid #1d4ca2;
   background-color: #000715;
   border-radius: 4px;
   white-space: pre-wrap;
+  margin: 1vh 1vw;
 }
 
 /* now that's better ...
 
-I just need a place to work with so just make this things clear 
+I just need a place to work with, so just make this things clear something like my IDE
 
 */
 
@@ -55,3 +63,12 @@ I just need a place to work with so just make this things clear
 .number {
   color: #27f973;
 }
+
+/* 
+yeah that's it ... 
+
+now let's talk about WORK ... 
+
+I believe it's the main reason you are here, just follow me 
+
+*/

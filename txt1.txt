@@ -1,0 +1,41 @@
+# WORK EXPERIENCE
+
+### React Developer
+Hichestan ( Address.ir )
+Acheievment/Tasks
+
++  Instructed, designed, implemented and maintained the company's internal panel (Corporate back-office).
++  Re-designed, instructed, implemented and maintained front-end (Neshooni). Boosted page load speed by 200% and decreased bundle size by 50% (Neshooni).
++  Refactored, maintained and upgraded to latest versions based on best practices (Address web application).
++  Researched and learned about Progressive Web Applications (PWA) and deep linking in them for 2 weeks.
++  Assisted my colleagues in debugging and brain-storming and helped them articulate their problems.
+
+
+### React Developer
+Behzee
+12/2017 – 08/2018 Achievements/Tasks
+
++  Instructed, designed, implemented and maintained the company's internal panel and user panels.
++  Instructed, designed, implemented and maintained client ReactNative app. Designed user interface and researched about the application's user experience. Coached 2 developers in ReactNative.
++  Participated in software architecture meetings.
++  Participated in product design meetings.
+
+# SKILLS
+
+-  HTML5
+-  CSS3
+-  JavaScript
+-  React
+-  React-Native
+-  Redux
+-  Redux-saga
+-  TypeScript
+-  ES6
+-  Scss, Less
+-  Git
+-  Effective Communication
+-  Approachability 
+-  Accountability
+-  Patience 
+-  Problem Solving
+   
