@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --content-base src --hot --inline "
+    "start": "webpack-dev-server --content-base src --hot --inline ",
+    "build": "webpack"
   },
   "author": "Alireza Tahani",
   "license": "ISC",
@@ -21,6 +22,7 @@
   },
   "dependencies": {
     "markdown-it": "^10.0.0",
+    "qrcode": "^1.4.2",
     "raw-loader": "^3.1.0"
   }
 }

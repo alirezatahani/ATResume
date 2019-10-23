@@ -1,14 +1,14 @@
 import style from "raw-loader!./style.css";
 import style2 from "raw-loader!./style2.css";
 import text1 from "raw-loader!./txt1.txt";
+import text2 from "raw-loader!./txt2.txt";
 import writeChar from "./write";
 import MarkdownIt from "markdown-it";
+import QRCode from "qrcode";
 import { writeSimpleChar } from "./write";
 
 let mainElement, workElement, styleHeader;
 const md = new MarkdownIt();
-const renderedText1 = md.render(text1);
-console.log(renderedText1);
 
 // Wait for load to get started.
 document.addEventListener("DOMContentLoaded", function() {
@@ -44,11 +44,26 @@ function getElements() {
   styleHeader = document.getElementById("styleHeader");
 }
 
+const generateQR = async text => {
+  try {
+    console.log(
+      "%c ",
+      `font-size:400px; background:url(${await QRCode.toDataURL(
+        text
+      )}) no-repeat;`
+    );
+    console.log("For those who think");
+  } catch (err) {
+    console.error(err);
+  }
+};
+
 async function startAnimation() {
-  await writeTo(true, 0, mainElement, style, 0);
+  await writeTo(true, 0, mainElement, style, 60);
   await delay(1000);
   writeTo(false, 0, workElement, text1, 0);
-  writeTo(true, 0, mainElement, style2, 0);
+  writeTo(true, 0, mainElement, style2, 60);
+  generateQR(text2);
   await delay(1000);
 }
 
